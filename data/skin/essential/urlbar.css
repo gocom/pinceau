@@ -1,0 +1,18 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/**
+ * Hide dropdown marker.
+ */
+
+#urlbar .autocomplete-history-dropmarker {
+    display: none !important;
+}
+
+/**
+ * Hide go button.
+ */
+
+#urlbar-go-button {
+    opacity: 0 !important;
+}

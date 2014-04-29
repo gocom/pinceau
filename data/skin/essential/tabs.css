@@ -1,0 +1,44 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/**
+ * Tab bar.
+ *
+ * Removes site icons, changes alignment.
+ */
+
+/**
+ * Tab Arrangement; hide favicons, move close button to the left.
+ */
+
+.tab-close-button {
+    -moz-box-ordinal-group: 1 !important;
+}
+
+.tab-text {
+    -moz-box-ordinal-group: 2 !important;
+}
+
+.tab-throbber {
+    -moz-box-ordinal-group: 3 !important;
+}
+
+.tab-icon-image {
+    -moz-box-ordinal-group: 4;
+    visibility: hidden !important;
+}
+
+.tabbrowser-tab[pinned] .tab-icon-image {
+    visibility: visible !important;
+}
+
+.tab-close-button {
+    visibility: hidden !important;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+tab:hover .tab-close-button {
+    visibility: visible !important;
+    opacity: 1;
+}

@@ -1,0 +1,20 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/**
+ * Hides icons from menus, expect checkmarks.
+ */
+
+.menu-iconic-icon {
+    display: none !important;
+}
+
+:not(menulist) > menupopup > menuitem[selected="true"] > .menu-iconic-left .menu-iconic-icon,
+:not(menulist) > menupopup > menuitem[checked="true"] > .menu-iconic-left .menu-iconic-icon {
+    display: block !important;
+}
+
+.menuitem-iconic,
+#bookmarksToolbarFolderMenu {
+    list-style-image: none !important;
+}

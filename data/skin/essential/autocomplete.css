@@ -1,0 +1,85 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/**
+ * Autocomplete suggestions.
+ */
+
+#PopupAutoCompleteRichResult {
+    -moz-appearance: menupopup !important;
+    background-color: menu !important;
+    margin: 3px 0 0 0 !important;
+    padding: 5px 0 !important;
+}
+
+.autocomplete-richlistbox {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.autocomplete-richlistitem {
+    border: 0 !important;
+    display: -moz-box !important;
+    -moz-box-sizing: border-box !important;
+    -moz-appearance: none !important;
+    -moz-box-orient: horizontal !important;
+    -moz-box-direction: normal !important;
+    color: menutext !important;
+    padding: 2px 21px 2px 21px !important;
+}
+
+/**
+ * Hides action images, tags, favicon and bookmark icon
+ */
+
+.autocomplete-richlistitem image,
+.autocomplete-richlistitem .ac-extra,
+.autocomplete-richlistitem .ac-result-type-bookmark,
+.autocomplete-richlistitem .ac-site-icon {
+    display: none !important;
+}
+
+.autocomplete-richlistitem .ac-title-box,
+.autocomplete-richlistitem .ac-url-box {
+    -moz-box-flex: 1 !important;
+    width: 300px !important;
+}
+
+.ac-normal-text.ac-url-text,
+.ac-url-box .ac-url span {
+    color: -moz-mac-menutextdisable !important;
+}
+
+.ac-url-box {
+    font-size: 0.95em !important;
+    margin-left: 21px !important;
+}
+
+.ac-action-text {
+    color: menutext !important;
+    margin: 0 !important;
+    list-style-image: none !important;
+}
+
+html|span.ac-emphasize-text {
+    font-weight: normal !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: inherit !important;
+    text-shadow: none !important;
+}
+
+/** 
+ * Selected row highlight.
+ */
+
+.autocomplete-richlistitem[selected="true"] {
+    color: -moz-mac-menutextselect !important;
+    background-color: Highlight !important;
+}
+
+.autocomplete-richlistitem[selected="true"] * {
+    color: -moz-mac-menutextselect !important;
+}

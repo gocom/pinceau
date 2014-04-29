@@ -1,0 +1,10 @@
+/**
+ * Initializes essential style sheets.
+ */
+
+@import url("essential/autocomplete.css");
+@import url("essential/bookmarks.css");
+@import url("essential/contextmenu.css");
+@import url("essential/menupopup.css");
+@import url("essential/tabs.css");
+@import url("essential/urlbar.css");

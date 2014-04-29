@@ -1,0 +1,13 @@
+{
+    "name": "pinceau",
+    "version": "0.1.0",
+    "title": "Pinceau",
+    "description": "Tame Firefox for Mac user-experience with an add-on. Paints window widgets with native palette on Mac OS 10.7 and 10.8.",
+    "license": "MIT",
+    "author": "Jukka Svahn",
+    "dependencies": [
+        "api-utils",
+        "addon-kit"
+    ],
+    "id": "jid1-BUZfIBjU36EDFg"
+}
