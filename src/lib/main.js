@@ -30,5 +30,5 @@
         }
     };
 
-    var tracker = new module.winUtils.WindowTracker(delegate);
+    new module.winUtils.WindowTracker(delegate);
 })();
