@@ -31,29 +31,26 @@
 {
     'use strict';
 
-    var module =
-    {
-        winUtils: require('sdk/deprecated/window-utils'),
-        style: require('sdk/stylesheet/style'),
-        content: require('sdk/content/mod'),
-        self: require('sdk/self')
-    };
+    var self = require('sdk/self'),
+        style = require('sdk/stylesheet/style'),
+        contentMod = require('sdk/content/mod'),
+        winUtils = require('sdk/deprecated/window-utils');
 
-    var style = module.style.Style({
-        uri: module.self.data.url('skin/browser.css')
+    var browserCss = style.Style({
+        uri: self.data.url('skin/browser.css')
     });
 
     var delegate =
     {
         onTrack: function (window)
         {
-            module.content.attachTo(style, window);
+            contentMod.attachTo(browserCss, window);
         },
         onUntrack: function (window)
         {
-            module.content.detachFrom(style, window);
+            contentMod.detachFrom(browserCss, window);
         }
     };
 
-    new module.winUtils.WindowTracker(delegate);
+    new winUtils.WindowTracker(delegate);
 })();
