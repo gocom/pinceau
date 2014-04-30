@@ -3,30 +3,20 @@ module.exports = function (grunt)
     'use strict';
 
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mozilla-addon-sdk');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        addon: grunt.file.readJSON('src/package.json'), 
+        addon: grunt.file.readJSON('src/package.json'),
 
         copy: {
             src: {
                 files: [
                     {expand: true, cwd: 'src/', src: ['!**/*.css', '!**/*.js', '**'], dest: 'build/'}
                 ]
-            }
-        },
-
-        cssmin: {
-            src: {
-                files: {
-                    'build/data/skin/browser.css': ['src/data/skin/essential/**/*.css']
-                }
             }
         },
 
@@ -62,7 +52,7 @@ module.exports = function (grunt)
             'run_stable': {
                 options: {
                     'mozilla-addon-sdk': '1_16',
-                    'extension_dir': 'build',
+                    'extension_dir': 'src',
                     command: 'run'
                 }
             },
@@ -70,7 +60,7 @@ module.exports = function (grunt)
             'run_experimental': {
                 options: {
                     'mozilla-addon-sdk': 'master',
-                    'extension_dir': 'build',
+                    'extension_dir': 'src',
                     command: 'run'
                 }
             }
@@ -80,7 +70,7 @@ module.exports = function (grunt)
             'stable': {
                 options: {
                     'mozilla-addon-sdk': '1_16',
-                    'extension_dir': 'build',
+                    'extension_dir': 'src',
                     'dist_dir': 'dist',
                     'arguments': '--strip-sdk'
                 }
@@ -89,7 +79,7 @@ module.exports = function (grunt)
             'experimental': {
                 options: {
                     'mozilla-addon-sdk': 'master',
-                    'extension_dir': 'build',
+                    'extension_dir': 'src',
                     'dist_dir': 'dist'
                 }
             }
@@ -111,34 +101,20 @@ module.exports = function (grunt)
             }
         },
 
-        uglify: {
-            src: {
-                options: {
-                    preserveComments: 'some'
-                },
-
-                files: [
-                    {
-                        'build/lib/main.js': ['src/lib/*.js']
-                    }
-                ]
-            }
-        },
-
         watch: {
-            css: {
-                files: ['src/**/*.css'],
-                tasks: ['cssmin']
+            src: {
+                files: ['src/**'],
+                tasks: ['build']
             },
 
             js: {
-                files: ['src/**/*.js'],
-                tasks: ['jshint', 'uglify']
+                files: ['Gruntfile.js', 'src/**/*.js'],
+                tasks: ['jshint']
             }
         }
     });
 
-    grunt.registerTask('build', ['jshint']);
+    grunt.registerTask('build', ['test', 'mozilla-cfx-xpi:stable']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('test', ['jshint']);
 };
