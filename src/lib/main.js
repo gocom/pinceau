@@ -52,5 +52,5 @@
         }
     };
 
-    new winUtils.WindowTracker(delegate);
+    winUtils.WindowTracker(delegate);
 })();
