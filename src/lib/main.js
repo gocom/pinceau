@@ -43,10 +43,6 @@
         uri: module.self.data.url('skin/browser.css')
     });
 
-    /**
-     * Track and attach to windows.
-     */
-
     var delegate =
     {
         onTrack: function (window)
