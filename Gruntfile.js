@@ -1,10 +1,11 @@
-module.exports = function (grunt)
+module.exports = function(grunt)
 {
     'use strict';
 
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-jscs-checker');
     grunt.loadNpmTasks('grunt-mozilla-addon-sdk');
 
     grunt.initConfig({
@@ -20,30 +21,24 @@ module.exports = function (grunt)
             }
         },
 
+        jscs: {
+            src: {
+                files: {
+                    src: ['Gruntfile.js', 'src/**/*.js']
+                },
+                options: {
+                    config: '.jscs.json'
+                }
+            }
+        },
+
         jshint: {
-            files: ['Gruntfile.js', 'src/**/*.js'],
-            options: {
-                bitwise: true,
-                camelcase: true,
-                curly: true,
-                eqeqeq: true,
-                es3: true,
-                forin: true,
-                immed: true,
-                indent: 4,
-                latedef: true,
-                noarg: true,
-                noempty: true,
-                nonew: true,
-                quotmark: 'single',
-                undef: true,
-                unused: true,
-                strict: true,
-                trailing: true,
-                browser: true,
-                globals: {
-                    module: true,
-                    require: true
+            src: {
+                files: {
+                    src: ['Gruntfile.js', 'src/**/*.js']
+                },
+                options: {
+                    jshintrc: true
                 }
             }
         },
@@ -116,5 +111,5 @@ module.exports = function (grunt)
 
     grunt.registerTask('build', ['test', 'mozilla-cfx-xpi:stable']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('test', ['jshint']);
+    grunt.registerTask('test', ['jshint', 'jscs']);
 };

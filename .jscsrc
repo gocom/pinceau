@@ -1,0 +1,13 @@
+{
+    "preset": "google",
+    "disallowMultipleLineStrings": true,
+    "disallowTrailingComma": true,
+    "disallowYodaConditions": true,
+    "maximumLineLength": 120,
+    "requireCamelCaseOrUpperCaseIdentifiers": true,
+    "requireCapitalizedConstructors": true,
+    "requireDotNotation": true,
+    "requireParenthesesAroundIIFE": true,
+    "safeContextKeyword": "$this",
+    "validateLineBreaks": "LF"
+}
