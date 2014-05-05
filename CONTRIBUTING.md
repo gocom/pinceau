@@ -11,7 +11,21 @@ Versioning
 
 [Semantic Versioning](http://semver.org/).
 
-Configure Git
+Install dependencies
+----
+
+The project uses [npm](http://nodejs.org/) to manage dependencies and [Grunt](http://gruntjs.com/) to run tasks. To install dependencies, run:
+
+    $ npm install
+
+Coding style
+----
+
+[Google JavaScript Style Guide](https://code.google.com/p/google-styleguide/). To verify that your additions follows these too, run:
+
+    $ grunt test
+
+Configure git
 ----
 
 For convenience your committer, git user, should be linked to your GitHub account:
