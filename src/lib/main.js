@@ -27,7 +27,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-(function ()
+(function()
 {
     'use strict';
 
@@ -44,11 +44,11 @@
 
     delegate =
     {
-        onTrack: function (window)
+        onTrack: function(window)
         {
             contentMod.attachTo(browserCss, window);
         },
-        onUntrack: function (window)
+        onUntrack: function(window)
         {
             contentMod.detachFrom(browserCss, window);
         }
