@@ -34,13 +34,15 @@
     var self = require('sdk/self'),
         style = require('sdk/stylesheet/style'),
         contentMod = require('sdk/content/mod'),
-        winUtils = require('sdk/deprecated/window-utils');
+        winUtils = require('sdk/deprecated/window-utils'),
+        browserCss,
+        delegate;
 
-    var browserCss = style.Style({
+    browserCss = style.Style({
         uri: self.data.url('skin/browser.css')
     });
 
-    var delegate =
+    delegate =
     {
         onTrack: function (window)
         {
