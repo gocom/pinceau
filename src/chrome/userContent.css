@@ -1,0 +1,70 @@
+@-moz-document url(about:newtab), url(about:home) {
+  .top-sites-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+  }
+
+  .top-site-outer {
+    width: -moz-min-content !important;
+    width: min-content !important;
+  }
+
+  .top-site-outer {
+    display: flex !important;
+    justify-content: center !important;
+    width: calc(192px + 16px + 16px) !important;
+  }
+
+  .top-site-outer .title .icon {
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  .top-site-outer .default-icon,
+  .top-site-outer .search-topsite,
+  .top-site-outer .title .icon,
+  .top-site-outer .top-site-icon:not(.rich-icon) {
+    display: none !important;
+  }
+
+  .top-site-outer.search-shortcut .icon.icon-pin-small {
+    display: inline-block !important;
+    background-image: url("resource://activity-stream/data/content/assets/glyph-search-16.svg") !important;
+    background-size: 12px !important;
+  }
+
+  .top-site-outer.search-shortcut .title span {
+    padding-right: 13px !important;
+  }
+
+  .top-site-outer .tile {
+    background-image: none !important;
+    background-position: 50% 50% !important;
+    background-size: cover !important;
+    height: 108px !important;
+    width: 192px !important;
+  }
+
+  .top-site-outer .title {
+    text-align: left !important;
+    width: 192px !important;
+  }
+
+  .top-site-outer .title span {
+    padding: 0 !important;
+  }
+
+  {{#thumbnails}}
+    .top-site-outer .top-site-icon[style*="{{site}}"],
+    .top-site-outer a[href*="{{site}}"] .tile {
+      background-image: url(data:{{type}};base64,{{{base64}}}) !important;
+    }
+
+    .top-site-outer a[href*="{{site}}"] .rich-icon,
+    .top-site-outer a[href*="{{site}}"] .screenshot,
+    .top-site-outer a[href*="{{site}}"] .tile::before {
+      display: none !important;
+    }
+  {{/thumbnails}}
+}

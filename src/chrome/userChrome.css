@@ -1,0 +1,145 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/**
+ * Hide the colourful top tab border.
+ */
+
+#tabbrowser-tabs {
+  --tab-line-color: transparent !important;
+}
+
+.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected="true"]) {
+  background-color: transparent !important;
+}
+
+.tab-background {
+  border-top-style: none !important;
+}
+
+/**
+ * Hide default favicon.
+ */
+
+.tab-icon-image[src^="chrome://"] {
+  visibility: hidden !important;
+}
+
+/**
+ * Reduce empty space between tabs and titlebar decorations.
+ */
+
+.titlebar-spacer[type="pre-tabs"] {
+  width: 12px !important;
+}
+
+.titlebar-spacer[type="post-tabs"] {
+  width: 3px !important;
+}
+
+:root[uidensity="compact"] .titlebar-placeholder[type="post-tabs"] {
+  width: 0 !important;
+}
+
+/**
+ * When populated, overflow menu replaces main menu.
+ *
+ * Only show a single hamburger menu at the time. Frankly, they both have the
+ * same items.
+ */
+
+:root:not([chromehidden~="toolbar"]) #nav-bar[nonemptyoverflow]:not([customizing]) > #nav-bar-overflow-button {
+  list-style-image: url("chrome://browser/skin/menu.svg") !important;
+}
+
+:root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #nav-bar[nonemptyoverflow]:not([customizing]) > #nav-bar-overflow-button {
+  border-image: linear-gradient(transparent 4px, var(--lwt-toolbar-vertical-separator, rgba(0, 0, 0, 0.1)) 4px, var(--lwt-toolbar-vertical-separator, rgba(0, 0, 0, 0.1)) calc(100% - 4px), transparent calc(100% - 4px)) !important;
+  border-image-slice: 1 !important;
+  border-inline-start: 1px solid !important;
+  margin-inline-start: 3px !important;
+  padding-inline-end: 5px !important;
+  padding-inline-start: 5px !important;
+}
+
+:root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #nav-bar[nonemptyoverflow][brighttext]:not([customizing]) > #nav-bar-overflow-button {
+  border-image-source: linear-gradient(transparent 4px, var(--lwt-toolbar-vertical-separator, rgba(255, 255, 255, 0.2)) 4px, var(--lwt-toolbar-vertical-separator, rgba(255, 255, 255, 0.2)) calc(100% - 4px), transparent calc(100% - 4px)) !important;
+}
+
+:root:not([chromehidden~="toolbar"]) #nav-bar[nonemptyoverflow]:not([customizing]) > .overflow-button ~ #PanelUI-button {
+  display: none !important;
+}
+
+/**
+ * Align titlebar icons with hamburger menu.
+ */
+
+:root:not([uidensity="compact"]) #TabsToolbar .toolbarbutton-1 {
+  padding-inline-start: 5px !important;
+}
+
+:root:not([uidensity="compact"]) #TabsToolbar > .toolbarbutton-1:last-child {
+  border-inline-start: 1px solid var(--tabs-border-color) !important;
+  margin-inline-start: 3px !important;
+}
+
+:root:not([uidensity="compact"]):not([tabsintitlebar]) #TabsToolbar > .toolbarbutton-1:last-child {
+  margin-inline-end: 3px !important;
+}
+
+/**
+ * Lighter shadows under the tab scrolling arrows.
+ */
+
+.tabbrowser-arrowscrollbox .arrowscrollbox-overflow-end-indicator,
+.tabbrowser-arrowscrollbox .arrowscrollbox-overflow-start-indicator {
+  opacity: 0.5 !important;
+}
+
+/**
+ * Private browsing button placeholder spacing is not properly applied on
+ * initial draw, and thus the indicator overlaps the tab bar. We allow
+ * click-through to mitigate that.
+ */
+
+#titlebar-secondary-buttonbox {
+  pointer-events: none !important;
+}
+
+#titlebar-secondary-buttonbox > *:not(.private-browsing-indicator) {
+  pointer-events: all !important;
+}
+
+/**
+ * Hide back button border and background.
+ */
+
+:root {
+  --backbutton-background: transparent !important;
+  --backbutton-border-color: transparent !important;
+}
+
+/**
+ * Allow window dragging around the toolbar buttons.
+ */
+
+#nav-bar,
+#nav-bar > .customization-target {
+  -moz-box-align: center !important;
+}
+
+/**
+ * Hide Show All Downloads.
+ */
+
+.downloadsPanelFooter {
+  display: none !important;
+}
+
+/**
+ * Hide thumbnail and favicon in the Bookmark this page panel.
+ */
+
+#editBookmarkPanelImage,
+html|div#editBookmarkPanelFaviconContainer {
+  display: none !important;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>MDN Web Docs</ShortName>
+  <LongName>MDN Web Docs Search</LongName>
+  <Description>Search Mozilla Developer Network Web Docs</Description>
+  <Url type="text/html" method="get" template="https://www.google.com/search?hl=en&amp;gl=US&amp;pws=0&amp;q=site:developer.mozilla.org+{searchTerms}"/>
+  <Url type="application/x-suggestions+json" template="http://suggestqueries.google.com/complete/search?output=firefox&amp;client=firefox&amp;hl=en&amp;gl=US&amp;pws=0&amp;q=site:developer.mozilla.org+{searchTerms}"/>
+  <Image height="32" width="32" type="image/png">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAABgElEQVR4AWPouPiRpmjUAjgatSBj+aG0OVuyVhymsgWl2y475zXySikwwIC4lpFDVk3avG0BrXP9mmeV7bhCvgXuxW3M7JwMeAGfpByZFpjHFzAQB2KmrSfZAtuMKgaiAZ+MUuLc7SRY4FbYwkA60HAJiJm8uubQAwIWeJV1MlAAOAREHDJrcFqQMG+ngIK6oKyykLwqAyMjeXZwiUjgtKD+yGMIwyGzmoGBTAs4hcXrgObgi4OiVkpCiUtYov7YU5wW1B194t0ww69ldvjktYouwWRYIGdkQ1Q+iJ28hp2Xn7B5zKzIPAlNw6S52wlbkL3mJJecOq+CBqeIJC6TjUJTMlcdz9lwLmriSuPgJBVbj/D+5SSXRequQVhNN4nIoEJhV77jKgs7B6bprJw85XtuU8GCpNlbSS3gSA4ii4QiTAvElDWpWeH41kxg5eZDSypUrtFKd1zTcA1EpHRDS5rUyQEts+VN7JjYOGR0TWhY6RdsOhc/Y9NoswUJjVoAAE+h555Rgcg2AAAAAElFTkSuQmCC</Image>
+  <InputEncoding>UTF-8</InputEncoding>
+  <moz:SearchForm>https://www.google.com/webhp?hl=en&amp;gl=US&amp;pws=0&amp;q=site:developer.mozilla.org</moz:SearchForm>
+</OpenSearchDescription>

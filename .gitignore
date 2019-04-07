@@ -1,4 +1,12 @@
-.DS_Store
-/dist
-/node_modules
-/npm-debug.log
+.*
+!.gitignore
+!.editorconfig
+!.eslintrc
+!.jscsrc
+!.jshintrc
+/backup/
+/build/
+/custom/
+/dist/
+/node_modules/
+package-lock.json

@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Install OpenSearch Plugins</title>
+
+  {{#engines}}
+    <link rel="search" type="application/opensearchdescription+xml" title="{{title}}" href="engines/{{engine}}">
+  {{/engines}}
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Space+Mono" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      background: #1a1a1a;
+      font: 1em/1.75 "Open Sans", sans-serif;
+      color: #ccc;
+    }
+
+    body {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 5em;
+      min-width: 20em;
+    }
+
+    ::selection {
+      background: #000;
+      color: #fff;
+    }
+
+    main {
+      flex: 1 1 100%;
+      max-width: 32em;
+    }
+
+    h1 {
+      font: bold 2em/1 "Open Sans", sans-serif;
+      margin: 0 0 1em 0;
+    }
+
+    p,
+    ul {
+      margin: 2em 0 0 0;
+    }
+
+    a {
+      color: #7555b3;
+      text-decoration: underline;
+    }
+
+    a:active,
+    a:focus,
+    a:hover {
+      color: #9165e7;
+    }
+
+    .button {
+      align-items: center;
+      background: #7555b3;
+      border: 0;
+      border-radius: 0.1875em;
+      box-shadow: 0 0.1875em 0.1875em rgba(0, 0, 0, 0.15);
+      color: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      font: inherit;
+      line-height: 1;
+      margin: 0 1em 0 0;
+      overflow-x: hidden;
+      padding: 0.5em 0.8em;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      transition: background-color 0.15s, box-shadow 0.25s, color 0.15s;
+      user-select: none;
+      white-space: nowrap;
+      -moz-user-select: none;
+    }
+
+    .button:focus,
+    .button:hover {
+      background: #9165e7;
+      box-shadow: 0 0.1875em 0.1875em rgba(0, 0, 0, 0.15);
+      color: #fff;
+    }
+
+    .button img {
+      border-radius: 50%;
+      height: 1em;
+      margin: 0 0.5em 0 0;
+      width: 1em;
+    }
+
+    .button + a,
+    .button + span {
+      margin: 0 1em 0 auto;
+    }
+
+    [disabled] {
+      color: #555;
+      cursor: not-allowed;
+      user-select: none;
+      -moz-user-select: none;
+    }
+
+    .button ~ a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 0.5em 1em;
+      transition: background-color 0.25s;
+    }
+
+    li:nth-of-type(2n+1) {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    li:first-child {
+      border-radius: 0.1875em 0.1875em 0 0;
+    }
+
+    li:last-child {
+      border-radius: 0 0 0.1875em 0.1875em;
+    }
+
+    li[data-focus="true"],
+    li:hover {
+      background: rgba(88, 73, 114, 0.2);
+    }
+
+    [data-open] {
+      animation: slide 0.25s linear;
+    }
+
+    html [data-open="false"] {
+      display: none;
+    }
+
+    .details {
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0 0 0.187em 0.1875em;
+      box-shadow: 0 0.1875em 0.0685em rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex: 0 1 auto;
+      margin: 0.5em -1em -0.5em -1em;
+      min-width: calc(100% + 2em);
+      order: 9;
+      padding: 0.5em 1em;
+    }
+
+    .details > * {
+      margin: 0 0 0 1em;
+    }
+
+    .details > :first-child {
+      margin-left: 0;
+    }
+
+    .details code {
+      color: inherit;
+      display: block;
+      font: 0.75em/1.75 "Space Mono", Monaco, Menlo, monospace;
+      overflow: hidden;
+      white-space: pre-wrap;
+      word-break: break-all;
+      word-wrap: break-word;
+    }
+
+    .details .label {
+      color: #777;
+      display: block;
+      font-size: 0.75em;
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: scale(0.35, 0) translate(50%, -200%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1, 1) translate(0, 0);
+      }
+    }
+
+    .toolbar {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .toolbar a {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0.1875em;
+      color: #fff;
+      flex: 0 0 auto;
+      font-weight: bold;
+      margin: 0 1em 0 0;
+      padding: 0.5em 1em;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -moz-user-select: none;
+    }
+
+    .toolbar a:focus,
+    .toolbar a:hover {
+      background: rgba(88, 73, 114, 0.2);
+      color: #fff;
+    }
+
+    .toolbar a:last-child {
+      margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Install a search engine plugin</h1>
+
+    <p class="toolbar">
+      <a download href="bookmarks.html">Bookmarks file</a>
+
+      {{#bookmarklets}}
+        <a title="Bookmarkable bookmarklet" href="{{href}}">Install all</a>
+      {{/bookmarklets}}
+    </p>
+
+    <ul>
+      {{#engines}}
+        <li class="item">
+          <a data-action="install" class="button" href="engines/{{engine}}" title="Click to install {{title}}"><img src="{{icon}}"> {{title}}</a>
+
+          {{#if url}}
+            <a class="query" rel="noreferrer" href="{{url}}" title="Bookmarkable query">url</a>
+          {{else}}
+            <span disabled>url</span>
+          {{/if}}
+
+          <a rel="noreferrer external" href="{{home}}" title="{{title}} homepage">home</a>
+
+          {{#if url}}
+            <div data-open="false" class="details">
+              <div><span class="label">keyword</span> <strong>@{{keyword}}</strong></div>
+              <div><span class="label">query url</span> <code>{{url}}</code></div>
+            </div>
+          {{/if}}
+        </li>
+      {{/engines}}
+    </ul>
+  </main>
+
+  <script>
+    (function () {
+      document.querySelectorAll('[data-action="install"]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          window.external.AddSearchProvider(event.target.href);
+        });
+      });
+
+      document.querySelectorAll('a[href][rel~="external"]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          window.open(event.target.href);
+        });
+      });
+
+      document.querySelectorAll('.query').forEach(function (element) {
+        element.addEventListener('click', function (event) {
+          let isOpen, open, details = this.parentNode.querySelector('.details');
+
+          event.preventDefault();
+
+          if (details.dataset.open === 'true') {
+            isOpen = true;
+          }
+
+          open = document.querySelector('.details[data-open="true"]');
+
+          if (open) {
+            open.dataset.open = 'false';
+            open.parentNode.dataset.focus = 'false';
+          }
+
+          if (!isOpen) {
+            details.dataset.open = 'true';
+            details.parentNode.dataset.focus = 'true';
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

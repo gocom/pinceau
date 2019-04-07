@@ -1,0 +1,16 @@
+{
+  "extends": "standard",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "semi": ["error", "always"]
+  },
+  "globals": {
+    "user_pref": "readonly"
+  }
+}
