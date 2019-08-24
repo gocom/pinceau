@@ -45,7 +45,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "^21.0.0",
-    "handlebars": "^4.1.1",
+    "handlebars": "^4.1.2",
     "load-grunt-tasks": "^4.0.0",
     "mime-types": "^2.1.18",
     "xml2js": "^0.4.19"
