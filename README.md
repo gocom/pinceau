@@ -3,6 +3,8 @@ pinceau - Firefox userChrome
 
 Personal userChrome.css, userContent.css and user.js customization for [Firefox](https://www.mozilla.org/en-US/firefox/new/) 65 and newer, targeting more native-like Mac OS experience, and disables on-boarding messages.
 
+[![Screenshot](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)
+
 Install
 ----
 
