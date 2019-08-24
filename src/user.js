@@ -118,5 +118,6 @@ user_pref('privacy.popups.showBrowserMessage', false);
 user_pref('reader.content_width', 5);
 user_pref('reader.line_height', 5);
 user_pref('sidebar.position_start', false);
+user_pref('toolkit.legacyUserProfileCustomizations.stylesheets', true);
 user_pref('toolkit.telemetry.reportingpolicy.firstRun', false);
 user_pref('xpinstall.signatures.required', false);
