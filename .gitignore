@@ -1,0 +1,7 @@
+.*
+/*
+!.gitignore
+!.editorconfig
+!/images/
+!/LICENSE
+!/README.md
