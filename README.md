@@ -13,13 +13,12 @@ Clone the repository, install dependencies and build it:
 ```
 $ git clone https://github.com/gocom/pinceau.git && cd pinceau
 $ npm install
-$ npm run build
 ```
 
 Then place the built files in the `build` directory to your Firefox profile:
 
 ```
-$ npm run install
+$ npm run project:install
 ```
 
 OpenSearch engines

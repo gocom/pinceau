@@ -1,6 +1,6 @@
 {
   "name": "pinceau",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Personal Firefox userChrome and userContent",
   "keywords": [
     "theme",
@@ -23,11 +23,12 @@
   ],
   "main": "",
   "scripts": {
-    "build": "grunt build",
-    "install": "grunt install",
+    "install": "grunt build",
     "lint": "grunt lint",
     "pack": "grunt pack",
-    "prepare": "grunt init",
+    "prepublishOnly": "grunt init",
+    "project:build": "grunt build",
+    "project:install": "grunt install",
     "start": "grunt connect",
     "test": "grunt test",
     "watch": "grunt watch"
