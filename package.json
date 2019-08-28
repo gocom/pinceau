@@ -25,10 +25,10 @@
   "scripts": {
     "install": "grunt build",
     "lint": "grunt lint",
-    "pack": "grunt pack",
     "prepublishOnly": "grunt init",
     "project:build": "grunt build",
     "project:install": "grunt install",
+    "project:pack": "grunt pack",
     "start": "grunt connect",
     "test": "grunt test",
     "watch": "grunt watch"

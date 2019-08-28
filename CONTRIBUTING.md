@@ -23,12 +23,12 @@ $ npm install
 Development
 -----
 
-Available commands to ease development, packaging and install:
+Available commands to ease development, packaging and installing:
 
 ```
-$ npm run build
-$ npm run install
-$ npm run pack
+$ npm run project:build
+$ npm run project:install
+$ npm run project:pack
 $ npm run watch
 $ npm start
 ```
