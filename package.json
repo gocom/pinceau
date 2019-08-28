@@ -23,7 +23,7 @@
   ],
   "main": "",
   "scripts": {
-    "postinstall": "grunt build",
+    "prepare": "grunt build",
     "lint": "grunt lint",
     "prepublishOnly": "grunt init",
     "project:build": "grunt build",
