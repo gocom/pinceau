@@ -1,0 +1,64 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '*.*.*'
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run project:build
+
+      - name: Package
+        run: npm run project:pack
+
+      - name: Changelog
+        id: changelog
+        run: |
+          contents="$(sed -e '1,/##/d' -e '/##/,$d' CHANGELOG.md)"
+          contents="${contents//'%'/'%25'}"
+          contents="${contents//$'\n'/'%0A'}"
+          contents="${contents//$'\r'/'%0D'}"
+          echo "::set-output name=contents::$contents"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: ${{ steps.changelog.outputs.contents }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Package
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ github.workspace }}/dist/pinceau.zip
+          asset_name: pinceau-v${{ github.ref }}.zip
+          asset_content_type: application/zip

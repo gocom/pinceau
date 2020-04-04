@@ -1,14 +1,16 @@
 pinceau - Firefox userChrome
 =====
 
-Personal userChrome.css, userContent.css and user.js customization for [Firefox](https://www.mozilla.org/en-US/firefox/new/) 65 and newer, targeting more native-like Mac OS experience, and disables on-boarding messages.
+[Download](https://github.com/gocom/pinceau/releases)
+
+Personal userChrome.css, userContent.css and user.js customization for [Firefox](https://www.mozilla.org/en-US/firefox/new/) 73 and newer, targeting more native-like Mac OS experience, and disables on-boarding messages.
 
 [![Screenshot](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)
 
 Install
 ----
 
-Clone the repository, install dependencies and build it:
+[Download a pre-built package](https://github.com/gocom/pinceau/releases), or clone the repository and build it:
 
 ```
 $ git clone https://github.com/gocom/pinceau.git && cd pinceau

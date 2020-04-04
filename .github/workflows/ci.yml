@@ -4,9 +4,11 @@ on: [push, pull_request]
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -15,7 +17,7 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
       - name: Test
@@ -24,10 +26,10 @@ jobs:
       - name: Build
         run: npm run project:build
 
-      - name: Package archive
+      - name: Package
         run: npm run project:pack
 
-      - name: Upload artifact
+      - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
           name: pinceau.zip
