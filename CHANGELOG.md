@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+* Re-publish 0.1.3 build artifact.
+
 ## 0.1.3
 
 * Fix compatibility with Firefox >= 73, root was changed to HTML from XUL.
