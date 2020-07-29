@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5
+
+* Remove outdated tab overflow arrow shadow styles.
+
 ## 0.1.4
 
 * Re-publish 0.1.3 build artifact.
