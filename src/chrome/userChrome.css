@@ -87,15 +87,6 @@
 }
 
 /**
- * Lighter shadows under the tab scrolling arrows.
- */
-
-.tabbrowser-arrowscrollbox .arrowscrollbox-overflow-end-indicator,
-.tabbrowser-arrowscrollbox .arrowscrollbox-overflow-start-indicator {
-  opacity: 0.5 !important;
-}
-
-/**
  * Private browsing button placeholder spacing is not properly applied on
  * initial draw, and thus the indicator overlaps the tab bar. We allow
  * click-through to mitigate that.
