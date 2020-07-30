@@ -4,8 +4,6 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-
     prefix: {
       home: process.env[process.platform === 'win32' ? 'USERPROFILE' : 'HOME']
     },
@@ -38,7 +36,7 @@ module.exports = function (grunt) {
     compress: {
       publish: {
         options: {
-          archive: 'dist/<%= pkg.name %>.zip'
+          archive: 'dist/pinceau.zip'
         },
         files: [
           {
@@ -189,13 +187,6 @@ module.exports = function (grunt) {
   });
 
   /*
-   * Initialize.
-   */
-  grunt.registerTask('init', 'Initializes the project.', [
-    'build'
-  ]);
-
-  /*
    * Lint.
    */
   grunt.registerTask('lint', 'Run linter.', [
@@ -337,7 +328,7 @@ module.exports = function (grunt) {
   grunt.registerMultiTask('install', 'Installs to browser profile.', function () {
     const path = require('path');
 
-    let profiles = [];
+    const profiles = [];
 
     let options = this.options({
       backups: null,
@@ -351,6 +342,10 @@ module.exports = function (grunt) {
         profiles.push(profile);
       }
     });
+
+    if (profiles.length === 0) {
+      return;
+    }
 
     this.files.forEach(function (file) {
       file.src.forEach(function (src) {

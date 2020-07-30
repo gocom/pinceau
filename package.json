@@ -1,6 +1,6 @@
 {
-  "name": "pinceau",
-  "version": "0.1.4",
+  "name": "@gocom/pinceau",
+  "version": "0.1.6",
   "description": "Personal Firefox userChrome and userContent",
   "keywords": [
     "theme",
@@ -25,7 +25,6 @@
   "scripts": {
     "prepare": "grunt build",
     "lint": "grunt lint",
-    "prepublishOnly": "grunt init",
     "project:build": "grunt build",
     "project:install": "grunt install",
     "project:pack": "grunt pack",
@@ -46,7 +45,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "^21.0.0",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.7.6",
     "load-grunt-tasks": "^4.0.0",
     "mime-types": "^2.1.18",
     "xml2js": "^0.4.19"
