@@ -5,10 +5,6 @@
 * Fix compatibility with Firefox >= 89.
 * Now requires Firefox 89 or newer.
 
-## 0.1.6
-
-* Remove outdated tab overflow arrow shadow styles.
-
 ## 0.1.5
 
 * Remove outdated tab overflow arrow shadow styles.
