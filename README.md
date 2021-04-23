@@ -3,7 +3,9 @@ pinceau - Firefox userChrome
 
 [Download](https://github.com/gocom/pinceau/releases)
 
-Personal userChrome.css, userContent.css and user.js customization for [Firefox](https://www.mozilla.org/en-US/firefox/new/) 78 and newer, targeting more native-like Mac OS experience, and disables on-boarding messages.
+Personal userChrome.css, userContent.css and user.js customization for
+[Firefox](https://www.mozilla.org/en-US/firefox/new/) 89 and newer, targeting more native-like macOS experience,
+and disables on-boarding messages.
 
 [![Screenshot](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)
 

@@ -2,7 +2,7 @@
 @namespace html url("http://www.w3.org/1999/xhtml");
 
 /**
- * Hide the colourful top tab border.
+ * Hide the colourful tab border.
  */
 
 #tabbrowser-tabs {
@@ -41,6 +41,10 @@
   width: 0 !important;
 }
 
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start: 0 !important;
+}
+
 /**
  * When populated, overflow menu replaces main menu.
  *
@@ -53,37 +57,11 @@
 }
 
 :root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #nav-bar[nonemptyoverflow]:not([customizing]) > #nav-bar-overflow-button {
-  border-image: linear-gradient(transparent 4px, var(--lwt-toolbar-vertical-separator, rgba(0, 0, 0, 0.1)) 4px, var(--lwt-toolbar-vertical-separator, rgba(0, 0, 0, 0.1)) calc(100% - 4px), transparent calc(100% - 4px)) !important;
-  border-image-slice: 1 !important;
-  border-inline-start: 1px solid !important;
-  margin-inline-start: 3px !important;
-  padding-inline-end: 5px !important;
-  padding-inline-start: 5px !important;
-}
-
-:root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #nav-bar[nonemptyoverflow][brighttext]:not([customizing]) > #nav-bar-overflow-button {
-  border-image-source: linear-gradient(transparent 4px, var(--lwt-toolbar-vertical-separator, rgba(255, 255, 255, 0.2)) 4px, var(--lwt-toolbar-vertical-separator, rgba(255, 255, 255, 0.2)) calc(100% - 4px), transparent calc(100% - 4px)) !important;
+  padding-inline-end: var(--toolbar-start-end-padding) !important;
 }
 
 :root:not([chromehidden~="toolbar"]) #nav-bar[nonemptyoverflow]:not([customizing]) > .overflow-button ~ #PanelUI-button {
   display: none !important;
-}
-
-/**
- * Align titlebar icons with hamburger menu.
- */
-
-:root:not([uidensity="compact"]) #TabsToolbar .toolbarbutton-1 {
-  padding-inline-start: 5px !important;
-}
-
-:root:not([uidensity="compact"]) #TabsToolbar > .toolbarbutton-1:last-child {
-  border-inline-start: 1px solid var(--tabs-border-color) !important;
-  margin-inline-start: 3px !important;
-}
-
-:root:not([uidensity="compact"]):not([tabsintitlebar]) #TabsToolbar > .toolbarbutton-1:last-child {
-  margin-inline-end: 3px !important;
 }
 
 /**

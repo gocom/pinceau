@@ -61,6 +61,7 @@
       background-image: url(data:{{type}};base64,{{{base64}}}) !important;
     }
 
+    .top-site-outer a[href*="{{site}}"] .icon-wrapper,
     .top-site-outer a[href*="{{site}}"] .rich-icon,
     .top-site-outer a[href*="{{site}}"] .screenshot,
     .top-site-outer a[href*="{{site}}"] .tile::before {
