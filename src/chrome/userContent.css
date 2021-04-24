@@ -1,4 +1,12 @@
+/**
+ * New tab page.
+ */
+
 @-moz-document url(about:newtab), url(about:home) {
+  .ds-outer-wrapper-breakpoint-override main {
+    padding-bottom: 0 !important;
+  }
+
   .top-sites-list {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -6,7 +14,6 @@
   }
 
   .top-site-outer {
-    width: -moz-min-content !important;
     width: min-content !important;
   }
 
@@ -14,6 +21,20 @@
     display: flex !important;
     justify-content: center !important;
     width: calc(192px + 16px + 16px) !important;
+  }
+
+  .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+    background: transparent !important;
+  }
+
+  .top-site-outer .tile .icon-wrapper {
+    border-radius: inherit !important;
+    height: 108px !important;
+    width: 192px !important;
+  }
+
+  .top-site-outer .tile .icon-wrapper.letter-fallback::before {
+    top: 0 !important;
   }
 
   .top-site-outer .title .icon {
@@ -26,6 +47,10 @@
   .top-site-outer .title .icon,
   .top-site-outer .top-site-icon:not(.rich-icon) {
     display: none !important;
+  }
+
+  .top-site-outer .rich-icon[style*="data:"] {
+    background-size: auto 65px !important;
   }
 
   .top-site-outer.search-shortcut .icon.icon-pin-small {
@@ -53,6 +78,11 @@
 
   .top-site-outer .title span {
     padding: 0 !important;
+  }
+
+  .outer-wrapper.newtab-experience .top-site-outer .context-menu-button {
+    inset-inline-end: 0 !important;
+    margin-top: -5px !important;
   }
 
   {{#thumbnails}}
