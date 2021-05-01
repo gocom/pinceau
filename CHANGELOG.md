@@ -2,6 +2,10 @@
 
 ## 0.2.0
 
+* New tab page Top sites **Custom Image URL** support.
+  Image now covers the whole thumbnail area.
+* Disable Firefox after update homepage override.
+* Disable sponsored Top Sites.
 * Fix compatibility with Firefox >= 89.
 * Now requires Firefox 89 or newer.
 
