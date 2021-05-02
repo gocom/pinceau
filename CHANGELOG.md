@@ -6,6 +6,7 @@
   Image now covers the whole thumbnail area.
 * Disable Firefox after update homepage override.
 * Disable sponsored top sites.
+* Remove fixed top sites count.
 * Fix compatibility with Firefox >= 89.
 * Now requires Firefox 89 or newer.
 

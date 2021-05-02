@@ -36,8 +36,6 @@ user_pref('browser.newtabpage.activity-stream.showSearch', false);
 user_pref('browser.newtabpage.activity-stream.showSponsored', false);
 user_pref('browser.newtabpage.activity-stream.showSponsoredTopSites', false);
 user_pref('browser.newtabpage.activity-stream.telemetry', false);
-user_pref('browser.newtabpage.activity-stream.topSitesCount', 12);
-user_pref('browser.newtabpage.activity-stream.topSitesRows', 2);
 user_pref('browser.newtabpage.enhanced', true);
 user_pref('browser.onboarding.enabled', false);
 user_pref('browser.onboarding.newtour', '');
