@@ -14,10 +14,6 @@
   }
 
   .top-site-outer {
-    width: min-content !important;
-  }
-
-  .top-site-outer {
     display: flex !important;
     justify-content: center !important;
     width: calc(192px + 16px + 16px) !important;
