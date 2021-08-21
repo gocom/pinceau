@@ -74,6 +74,7 @@ user_pref('extensions.formautofill.creditCards.enabled', false);
 user_pref('general.autoScroll', false);
 user_pref('general.smoothScroll', true);
 user_pref('general.warnOnAboutConfig', false);
+user_pref('full-screen-api.macos-native-full-screen', true);
 user_pref('mousewheel.acceleration.factor', 3);
 user_pref('mousewheel.acceleration.start', 3);
 user_pref('mousewheel.default.action.override_x', 0);
