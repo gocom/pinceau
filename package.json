@@ -1,6 +1,6 @@
 {
   "name": "@gocom/pinceau",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Personal Firefox userChrome and userContent",
   "keywords": [
     "theme",
