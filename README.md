@@ -19,7 +19,7 @@ $ git clone https://github.com/gocom/pinceau.git && cd pinceau
 $ make build
 ```
 
-Then place the built files in the `build` directory to your Firefox profile, either manually, or running:
+Then place the built files in the `build` directory to your Firefox profile, either manually, or by running:
 
 ```
 $ make install
