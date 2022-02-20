@@ -20,17 +20,11 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Install Dependencies
-        run: npm install
-
       - name: Test
-        run: npm test
-
-      - name: Build
-        run: npm run project:build
+        run: make test
 
       - name: Package
-        run: npm run project:pack
+        run: make package
 
       - name: Changelog
         id: changelog

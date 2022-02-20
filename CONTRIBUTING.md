@@ -14,7 +14,7 @@ Versioning
 Install dependencies
 ----
 
-The project uses [npm](https://nodejs.org/) to manage dependencies and [Grunt](https://gruntjs.com/) to run tasks. To install dependencies, run:
+The project uses Makefiles, [npm](https://nodejs.org/) to manage dependencies and [Grunt](https://gruntjs.com/) to run tasks. To install dependencies, run:
 
 ```
 $ npm install
@@ -23,14 +23,10 @@ $ npm install
 Development
 -----
 
-Available commands to ease development, packaging and installing:
+For available commands, see:
 
 ```
-$ npm run project:build
-$ npm run project:install
-$ npm run project:pack
-$ npm run watch
-$ npm start
+$ make help
 ```
 
 Coding style
@@ -39,7 +35,7 @@ Coding style
 To verify that your additions follows coding style, run:
 
 ```
-$ npm run lint
+$ make lint
 ```
 
 Configure git

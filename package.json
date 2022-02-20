@@ -23,7 +23,6 @@
   ],
   "main": "",
   "scripts": {
-    "prepare": "grunt build",
     "lint": "grunt lint",
     "project:build": "grunt build",
     "project:install": "grunt install",

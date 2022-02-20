@@ -16,13 +16,13 @@ Install
 
 ```
 $ git clone https://github.com/gocom/pinceau.git && cd pinceau
-$ npm install
+$ make build
 ```
 
-Then place the built files in the `build` directory to your Firefox profile:
+Then place the built files in the `build` directory to your Firefox profile, either manually, or running:
 
 ```
-$ npm run project:install
+$ make install
 ```
 
 OpenSearch engines
@@ -31,8 +31,10 @@ OpenSearch engines
 Open search engines can be installed through the included server and the web page:
 
 ```
-$ npm start
+$ make start
 ```
+
+You can find the web server from the address printed after running the above command.
 
 Customization
 -----
@@ -45,7 +47,7 @@ Custom thumbnails can be added by creating a `custom/sites` directory and adding
 $ mkdir -p custom/sites
 $ curl -s http://via.placeholder.com/320x180.jpg > custom/sites/google.com.jpg
 $ curl -s http://via.placeholder.com/320x180.jpg > custom/sites/mozilla.org.jpg
-$ npm run project:build
+$ make build
 ```
 
 ### Custom userContent style sheets

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0
+
+* Enable native macOS fullscreen.
+* Add Makefile wrapper.
+
 ## 0.2.0
 
 * New tab page top sites **Custom Image URL** support.
