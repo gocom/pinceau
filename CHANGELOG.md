@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0
+
+* Reduce pre-tab spacing on Windows.
+
 ## 0.3.0
 
 * Enable native macOS fullscreen.
