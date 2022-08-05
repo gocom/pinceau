@@ -4,7 +4,7 @@ pinceau - Firefox userChrome
 [Download](https://github.com/gocom/pinceau/releases)
 
 Personal userChrome.css, userContent.css and user.js customization for
-[Firefox](https://www.mozilla.org/en-US/firefox/new/) 89 and newer, targeting more native-like macOS experience,
+[Firefox](https://www.mozilla.org/en-US/firefox/new/) 99 and newer, targeting more native-like macOS experience,
 and disables on-boarding messages.
 
 [![Screenshot](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)
@@ -19,7 +19,8 @@ $ git clone https://github.com/gocom/pinceau.git && cd pinceau
 $ make build
 ```
 
-Then place the built files in the `build` directory to your Firefox profile, either manually, or by running:
+Building requires [Node.js](https://nodejs.org/) and npm to be installed and available in path. Then place the built
+files in the `build` directory to your Firefox profile, either manually, or by running:
 
 ```
 $ make install
@@ -41,7 +42,8 @@ Customization
 
 ### New tab page top site thumbnails
 
-Custom thumbnails can be added by creating a `custom/sites` directory and adding thumbnail images named after the site's hostname:
+Custom thumbnails can be added by creating a `custom/sites` directory and adding thumbnail images named after the
+site's hostname:
 
 ```
 $ mkdir -p custom/sites
