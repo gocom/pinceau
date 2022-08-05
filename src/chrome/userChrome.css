@@ -45,6 +45,12 @@
   margin-inline-start: 0 !important;
 }
 
+@media (-moz-platform: windows) {
+  .titlebar-spacer[type="pre-tabs"] {
+    width: 3px !important;
+  }
+}
+
 /**
  * When populated, overflow menu replaces main menu.
  *
