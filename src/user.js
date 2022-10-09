@@ -56,7 +56,6 @@ user_pref('browser.urlbar.doubleClickSelectsAll', false);
 user_pref('browser.urlbar.matchBuckets', 'general:5,suggestion:Infinity');
 user_pref('browser.urlbar.maxRichResults', 15);
 user_pref('browser.urlbar.oneOffSearches', false);
-user_pref('browser.urlbar.quicksuggest.enabled', false);
 user_pref('browser.urlbar.quicksuggest.shouldShowOnboardingDialog', false);
 user_pref('browser.urlbar.searchSuggestionsChoice', false);
 user_pref('browser.urlbar.sponsoredTopSites', false);
