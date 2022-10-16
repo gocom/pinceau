@@ -17,7 +17,7 @@ Install
 
 [Download a pre-built pinceau.zip package](https://github.com/gocom/pinceau/releases/latest/download/pinceau.zip) and extract the contents to your Firefox profile directory.
 
-Tip: You open `about:profiles` page in Firefox to find and navigate to your profile directory.
+Tip: You can open `about:profiles` page in Firefox to find your profile root directory.
 
 Build manually from source
 -----
