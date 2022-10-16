@@ -54,7 +54,6 @@ module.exports = function (grunt) {
         options: {
           port: 8314,
           protocol: 'http',
-          hostname: '127.0.0.1',
           base: 'build/opensearch',
           open: false,
           keepalive: true,
@@ -143,7 +142,8 @@ module.exports = function (grunt) {
       options: {
         profiles: [
           '<%= prefix.home %>/Library/Application Support/Firefox/Profiles/*',
-          '<%= prefix.home %>/.mozilla/firefox/*'
+          '<%= prefix.home %>/.mozilla/firefox/*',
+          '<%= prefix.home %>/Roaming/Mozilla/Firefox/Profiles/'
         ],
         backups: 'backup/<%= Date.now() %>/'
       },

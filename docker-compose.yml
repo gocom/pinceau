@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  node:
+    image: node:16.18.0-bullseye
+    working_dir: /app
+    command: npm run start
+    volumes:
+      - .:/app
+    network_mode: bridge
+    ports:
+      - 127.0.0.1:8314:8314
