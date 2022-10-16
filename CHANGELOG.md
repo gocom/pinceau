@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1
+
+* Disable ads in address bar on Firefox >= 94.
+
 ## 0.4.0
 
 * Reduce pre-tab spacing on Windows.
