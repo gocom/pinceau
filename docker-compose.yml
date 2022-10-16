@@ -2,7 +2,9 @@ version: "3"
 
 services:
   node:
-    build: ./docker/image/node
+    image: node:16.18.0-bullseye
+    working_dir: /app
+    command: npm run start
     volumes:
       - .:/app
     network_mode: bridge
