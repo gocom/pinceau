@@ -23,53 +23,7 @@ extract it and copy the contents to your Firefox profile's root directory.
 Tip: You can open `about:profiles` page in Firefox to find
 your profile root directory location.
 
-Build manually from source
+Development
 -----
 
-On Unix-like systems you can clone the repository and build it:
-
-```
-$ git clone https://github.com/gocom/pinceau.git && cd pinceau
-$ make build
-```
-
-Building requires [Node.js](https://nodejs.org/) and npm to be installed and available in path. Then place the built
-files in the `build` directory to your Firefox profile, either manually, or by running:
-
-```
-$ make install
-```
-
-OpenSearch engines
------
-
-Open search engines can be installed through the included server and the web page:
-
-```
-$ make start
-```
-
-You can find the web server from the address printed after running the above command.
-
-Customization
------
-
-### New tab page top site thumbnails
-
-Custom thumbnails can be added by creating a `custom/sites` directory and adding thumbnail images named after the
-site's hostname:
-
-```
-$ mkdir -p custom/sites
-$ curl -s http://via.placeholder.com/320x180.jpg > custom/sites/google.com.jpg
-$ curl -s http://via.placeholder.com/320x180.jpg > custom/sites/mozilla.org.jpg
-$ make build
-```
-
-### Custom userContent style sheets
-
-Custom styles sheets can be created to `custom/content` directory and will be appended to the generated userContent.css.
-
-### Custom search engines
-
-Custom OpenSearch engines can be created to `custom/opensearch/engines`.
+For building, customizations and development instructions, see [CONTRIBUTING.md](https://raw.github.com/gocom/pinceau/master/CONTRIBUTING.md).

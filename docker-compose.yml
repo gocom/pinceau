@@ -1,10 +1,10 @@
 version: "3"
 
 services:
-  build:
-    build: ./docker/image/build
+  node:
+    build: ./docker/image/node
     volumes:
       - .:/app
-    # network_mode: bridge
+    network_mode: bridge
     ports:
       - 127.0.0.1:8314:8314

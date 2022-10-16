@@ -11,15 +11,11 @@ Versioning
 
 [Semantic Versioning](https://semver.org/).
 
-Install dependencies
-----
+Requirements
+-----
 
-The project uses Makefiles, [npm](https://nodejs.org/) to manage dependencies and [Grunt](https://gruntjs.com/) to run
-tasks. To install dependencies, run:
-
-```
-$ npm install
-```
+* GNU make
+* [Docker](https://www.docker.com/) and docker-compose
 
 Development
 -----
@@ -30,6 +26,54 @@ For available commands, see:
 $ make help
 ```
 
+Building
+-----
+
+To build distributable files, run:
+
+```
+$ make build
+```
+
+Builds are created to a `build` directory in the project directory,
+which can be installed to a Firefox profile.
+
+OpenSearch engines
+-----
+
+Open search engines can be installed through the included server and the web page:
+
+```
+$ make start
+```
+
+You can find the web server from the address printed after running the above command.
+
+Customization
+-----
+
+### New tab page top site thumbnails
+
+Custom thumbnails can be added by creating a `custom/sites` directory
+and adding thumbnail images named after the
+site's hostname:
+
+```
+$ mkdir -p custom/sites
+$ curl -s http://via.placeholder.com/320x180.jpg > custom/sites/google.com.jpg
+$ curl -s http://via.placeholder.com/320x180.jpg > custom/sites/mozilla.org.jpg
+$ make build
+```
+
+### Custom userContent style sheets
+
+Custom styles sheets can be created to `custom/content` directory and will be
+appended to the generated userContent.css.
+
+### Custom search engines
+
+Custom OpenSearch engines can be created to `custom/opensearch/engines`.
+
 Coding style
 -----
 
@@ -38,17 +82,3 @@ To verify that your additions follows coding style, run:
 ```
 $ make lint
 ```
-
-Configure git
------
-
-For convenience your committer, git user, should be linked to your GitHub account:
-
-```
-$ git config --global user.name "John Doe"
-$ git config --global user.email john.doe@example.com
-```
-
-Make sure to use an email address that is linked to your GitHub account. It can be a throwaway address, or you can
-use GitHub's email protection features. We don't want your emails, but this is to make sure we know who did what. All
-commits nicely link to their author, instead of them coming from ``foobar@invalid.tld``.

@@ -54,7 +54,6 @@ module.exports = function (grunt) {
         options: {
           port: 8314,
           protocol: 'http',
-          hostname: '127.0.0.1',
           base: 'build/opensearch',
           open: false,
           keepalive: true,

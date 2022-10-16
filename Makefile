@@ -1,41 +1,41 @@
 .PHONY: all rebuild clean help install lint package start test watch
 
-RUN = docker-compose run --rm build
+NODE = docker-compose run --rm node
 
 all: build
 
 build: node_modules
-	$(RUN) npm run project:build
+	$(NODE) npm run project:build
 
 rebuild: node_modules
-	$(RUN) npm run project:build
+	$(NODE) npm run project:build
 
 clean:
-	$(RUN) rm -rf build dist node_modules package-lock.json
+	$(NODE) rm -rf build dist node_modules package-lock.json
 
 install:
-	@$(RUN) bash -c 'read -r -p "Are you sure you want to try to install pinceau to your Firefox profile? This will overwrite files on your system and you may lose data. Proceed (Yes/no)? " answer && [[ "$answer" == [Yy]* ]]'
-	@$(RUN) rm -rf node_modules package-lock.json
+	@$(NODE) bash -c 'read -r -p "Are you sure you want to try to install pinceau to your Firefox profile? This requires that node and npm are installed on the host system, and will delete any current builds and installed packages, after which it will re-install them using the host system npm. This will overwrite files on your system and you may lose data. Proceed (Yes/no)? " answer && [[ "$answer" == [Yy]* ]]'
+	@$(MAKE) clean
 	npm install
 	npm run project:install
 
 lint: node_modules
-	$(RUN) npm run lint
+	$(NODE) npm run lint
 
 node_modules:
-	$(RUN) npm install
+	$(NODE) npm install
 
 package: build
-	$(RUN) npm run project:pack
+	$(NODE) npm run project:pack
 
 start: build
 	docker-compose up
 
 test: node_modules
-	$(RUN) npm run test
+	$(NODE) npm run test
 
 watch: node_modules
-	$(RUN) npm run watch
+	$(NODE) npm run watch
 
 help:
 	@echo "Manage project"
