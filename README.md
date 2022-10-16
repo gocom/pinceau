@@ -1,18 +1,28 @@
 pinceau - Firefox userChrome
 =====
 
-[Download](https://github.com/gocom/pinceau/releases)
+[Download](https://github.com/gocom/pinceau/releases/latest/download/pinceau.zip) | [Changes](https://github.com/gocom/pinceau/releases)
 
 Personal userChrome.css, userContent.css and user.js customization for
-[Firefox](https://www.mozilla.org/en-US/firefox/new/) 99 and newer, targeting more native-like macOS experience,
-and disables on-boarding messages.
+[Firefox](https://www.mozilla.org/en-US/firefox/new/) 99 and newer, targeting more minimal user-interface and reduces on-boarding messages and tweaks Firefox's scrolling behaviour.
 
-[![Screenshot](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)
+[![Firefox on Windows](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox-windows.png)](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox-windows.png)
+*Firefox on Windows with pinceau*
+
+[![Firefox on macOS](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)](https://raw.githubusercontent.com/gocom/pinceau/screenshots/images/firefox.png)
+*Firefox on macOS with pinceau*
 
 Install
-----
+-----
 
-[Download a pre-built package](https://github.com/gocom/pinceau/releases), or clone the repository and build it:
+[Download a pre-built pinceau.zip package](https://github.com/gocom/pinceau/releases/latest/download/pinceau.zip) and extract the contents to your Firefox profile directory.
+
+Tip: You open `about:profiles` page in Firefox to find and navigate to your profile directory.
+
+Build manually from source
+-----
+
+On Unix-like systems you can clone the repository and build it:
 
 ```
 $ git clone https://github.com/gocom/pinceau.git && cd pinceau
