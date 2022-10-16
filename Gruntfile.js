@@ -143,7 +143,8 @@ module.exports = function (grunt) {
       options: {
         profiles: [
           '<%= prefix.home %>/Library/Application Support/Firefox/Profiles/*',
-          '<%= prefix.home %>/.mozilla/firefox/*'
+          '<%= prefix.home %>/.mozilla/firefox/*',
+          '<%= prefix.home %>/Roaming/Mozilla/Firefox/Profiles/'
         ],
         backups: 'backup/<%= Date.now() %>/'
       },

@@ -1,38 +1,41 @@
-.PHONY: all build check-build clean help install lint package start test watch
+.PHONY: all rebuild clean help install lint package start test watch
 
-all: build-clean
+RUN = docker-compose run --rm build
+
+all: build
 
 build: node_modules
-	npm run project:build
+	$(RUN) npm run project:build
 
-check-build: node_modules
-ifeq (,$(wildcard ./build))
-	npm run project:build
-endif
+rebuild: node_modules
+	$(RUN) npm run project:build
 
 clean:
-	rm -rf build dist node_modules package-lock.json
+	$(RUN) rm -rf build dist node_modules package-lock.json
 
-install: check-build
+install:
+	@$(RUN) bash -c 'read -r -p "Are you sure you want to try to install pinceau to your Firefox profile? This will overwrite files on your system and you may lose data. Proceed (Yes/no)? " answer && [[ "$answer" == [Yy]* ]]'
+	@$(RUN) rm -rf node_modules package-lock.json
+	npm install
 	npm run project:install
 
 lint: node_modules
-	npm run lint
+	$(RUN) npm run lint
 
 node_modules:
-	npm install
+	$(RUN) npm install
 
-package: check-build
-	npm run project:pack
+package: build
+	$(RUN) npm run project:pack
 
-start: check-build
-	npm run start
+start: build
+	docker-compose up
 
 test: node_modules
-	npm run test
+	$(RUN) npm run test
 
 watch: node_modules
-	npm run watch
+	$(RUN) npm run watch
 
 help:
 	@echo "Manage project"
@@ -44,6 +47,9 @@ help:
 	@echo ""
 	@echo "  $$ make build"
 	@echo "  Install dependencies and build project"
+	@echo ""
+	@echo "  $$ make rebuild"
+	@echo "  Rebuilds the project"
 	@echo ""
 	@echo "  $$ make clean"
 	@echo "  Clean installed dependencies and artifacts"
