@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  build:
+    build: ./docker/image/build
+    volumes:
+      - .:/app
+    # network_mode: bridge
+    ports:
+      - 127.0.0.1:8314:8314
