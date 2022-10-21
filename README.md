@@ -26,4 +26,4 @@ your profile root directory location.
 Development
 -----
 
-For building, customization and development instructions, see [CONTRIBUTING.md](https://raw.github.com/gocom/pinceau/master/CONTRIBUTING.md).
+For building, customization and development instructions, see [CONTRIBUTING.md](https://github.com/gocom/pinceau/blob/master/CONTRIBUTING.md).
