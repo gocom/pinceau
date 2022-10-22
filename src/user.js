@@ -60,6 +60,7 @@ user_pref('browser.urlbar.quicksuggest.shouldShowOnboardingDialog', false);
 user_pref('browser.urlbar.searchSuggestionsChoice', false);
 user_pref('browser.urlbar.sponsoredTopSites', false);
 user_pref('browser.urlbar.suggest.bookmark', true);
+user_pref('browser.urlbar.suggest.engines', false);
 user_pref('browser.urlbar.suggest.history', false);
 user_pref('browser.urlbar.suggest.openpage', false);
 user_pref('browser.urlbar.suggest.quicksuggest.nonsponsored', false);
