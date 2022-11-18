@@ -28,7 +28,7 @@ jobs:
           contents="${contents//'%'/'%25'}"
           contents="${contents//$'\n'/'%0A'}"
           contents="${contents//$'\r'/'%0D'}"
-          echo "::set-output name=contents::$contents"
+          echo "contents=$contents" >> $GITHUB_OUTPUT
 
       - name: Create Release
         id: create_release
