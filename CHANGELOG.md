@@ -3,6 +3,8 @@
 ## 0.4.1
 
 * Disable ads in address bar on Firefox >= 94.
+* Disable search engine suggestion row in address bar.
+* Disable CFR recommendations.
 
 ## 0.4.0
 
