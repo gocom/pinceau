@@ -13,7 +13,7 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Test
         run: make test
@@ -24,28 +24,18 @@ jobs:
       - name: Changelog
         id: changelog
         run: |
-          contents="$(sed -e '1,/##/d' -e '/##/,$d' CHANGELOG.md)"
-          contents="${contents//'%'/'%25'}"
-          contents="${contents//$'\n'/'%0A'}"
-          contents="${contents//$'\r'/'%0D'}"
-          echo "contents=$contents" >> $GITHUB_OUTPUT
+          echo "contents<<CHANGELOGEOF" >> $GITHUB_OUTPUT
+          sed -e '1,/##/d' -e '/##/,$d' CHANGELOG.md >> $GITHUB_OUTPUT
+          echo "CHANGELOGEOF" >> $GITHUB_OUTPUT
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: shogo82148/actions-create-release@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
           body: ${{ steps.changelog.outputs.contents }}
-          draft: false
-          prerelease: false
 
       - name: Upload Package
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: shogo82148/actions-upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ${{ github.workspace }}/dist/pinceau.zip
