@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0
+
+* Remove overflow menu's main hamburger menu replacement feature. Firefox >= 109 has a separate extension menu
+  where extension icons go, making the additional overflow less useful. As such, we no longer are able to reduce
+  the number of menus to just one; instead we can now display the more feature rich main menu instead and have an
+  option for a third additional overflow menu.
+
 ## 0.4.2
 
 * Disable search engine suggestion row in address bar.

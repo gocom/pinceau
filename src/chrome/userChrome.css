@@ -52,25 +52,6 @@
 }
 
 /**
- * When populated, overflow menu replaces main menu.
- *
- * Only show a single hamburger menu at the time. Frankly, they both have the
- * same items.
- */
-
-:root:not([chromehidden~="toolbar"]) #nav-bar[nonemptyoverflow]:not([customizing]) > #nav-bar-overflow-button {
-  list-style-image: url("chrome://browser/skin/menu.svg") !important;
-}
-
-:root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #nav-bar[nonemptyoverflow]:not([customizing]) > #nav-bar-overflow-button {
-  padding-inline-end: var(--toolbar-start-end-padding) !important;
-}
-
-:root:not([chromehidden~="toolbar"]) #nav-bar[nonemptyoverflow]:not([customizing]) > .overflow-button ~ #PanelUI-button {
-  display: none !important;
-}
-
-/**
  * Private browsing button placeholder spacing is not properly applied on
  * initial draw, and thus the indicator overlaps the tab bar. We allow
  * click-through to mitigate that.
