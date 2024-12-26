@@ -1,4 +1,4 @@
-.PHONY: all rebuild clean help install lint package start test watch
+.PHONY: all rebuild clean help install lint package shell start test watch
 
 NODE = docker compose run --rm node
 
@@ -27,6 +27,9 @@ node_modules:
 
 package: build
 	$(NODE) npm run project:pack
+
+shell:
+	$(NODE) bash
 
 start: build
 	docker-compose up
@@ -62,6 +65,9 @@ help:
 	@echo ""
 	@echo "  $$ make package"
 	@echo "  Package build result to a distributable ZIP file"
+	@echo ""
+	@echo "  $$ make shell"
+	@echo "  Log in to the container"
 	@echo ""
 	@echo "  $$ make start"
 	@echo "  Start server that allows registering OpenSearch providers"
