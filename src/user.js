@@ -79,6 +79,7 @@ user_pref('dom.forms.autocomplete.formautofill', true);
 user_pref('experiments.activeExperiment', false);
 user_pref('extensions.formautofill.addresses.enabled', false);
 user_pref('extensions.formautofill.creditCards.enabled', false);
+user_pref('extensions.pocket.enabled', false);
 user_pref('general.autoScroll', false);
 user_pref('general.smoothScroll', true);
 user_pref('full-screen-api.macos-native-full-screen', true);

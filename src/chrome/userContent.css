@@ -19,7 +19,7 @@
     width: calc(192px + 16px + 16px) !important;
   }
 
-  .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
     background: transparent !important;
   }
 
@@ -76,9 +76,9 @@
     padding: 0 !important;
   }
 
-  .outer-wrapper.newtab-experience .top-site-outer .context-menu-button {
+  .top-site-outer .context-menu-button {
+    background-color: transparent !important;
     inset-inline-end: 0 !important;
-    margin-top: -5px !important;
   }
 
   {{#thumbnails}}
