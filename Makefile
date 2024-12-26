@@ -1,6 +1,6 @@
 .PHONY: all rebuild clean help install lint package start test watch
 
-NODE = docker-compose run --rm node
+NODE = docker compose run --rm node
 
 all: build
 
