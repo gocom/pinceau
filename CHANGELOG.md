@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.0
+
+* Remove weather widget from the new tab page.
+* Fix new tab page tile hover styling on recent Firefox versions. The hover background used to be disabled, and
+  is now again.
+* Disable Pocket extension.
+
 ## 0.5.0
 
 * Remove overflow menu's main hamburger menu replacement feature. Firefox >= 109 has a separate extension menu

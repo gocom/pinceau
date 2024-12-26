@@ -4,7 +4,7 @@ pinceau - Firefox userChrome
 [Download](https://github.com/gocom/pinceau/releases/latest/download/pinceau.zip) | [Changes](https://github.com/gocom/pinceau/releases)
 
 Personal userChrome.css, userContent.css and user.js customization for
-[Firefox](https://www.mozilla.org/en-US/firefox/new/) 109 and newer,
+[Firefox](https://www.mozilla.org/en-US/firefox/new/) 133 and newer,
 targeting more minimal user-interface and reduces on-boarding
 messages and tweaks Firefox's scrolling behaviour.
 
