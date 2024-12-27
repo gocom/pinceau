@@ -16,7 +16,8 @@ module.exports = function (grunt) {
       ],
       js: [
         'clean:js',
-        'copy:js'
+        'copy:js',
+        'concat:user'
       ],
       opensearch: [
         'clean:opensearch',
@@ -46,6 +47,16 @@ module.exports = function (grunt) {
             dest: '/'
           }
         ]
+      }
+    },
+
+    concat: {
+      user: {
+        src: [
+          'src/user.js',
+          'custom/user.js'
+        ],
+        dest: 'build/user.js'
       }
     },
 

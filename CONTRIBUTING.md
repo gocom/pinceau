@@ -70,6 +70,11 @@ $ make build
 Custom styles sheets can be created to `custom/content` directory and will be
 appended to the generated userContent.css.
 
+### Custom user.js preferences
+
+Custom user settings file can be created to `custom/user.js` and it will be
+appended to the generated user.js.
+
 ### Custom search engines
 
 Custom OpenSearch engines can be created to `custom/opensearch/engines`.
