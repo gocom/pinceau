@@ -10,12 +10,13 @@
   .top-sites-list {
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: space-between !important;
   }
 
   .top-site-outer {
     display: flex !important;
     justify-content: center !important;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
     width: calc(192px + 16px + 16px) !important;
   }
 
@@ -23,10 +24,15 @@
     background: transparent !important;
   }
 
-  .top-site-outer .tile .icon-wrapper {
+  .top-site-outer:not(.add-button) .tile .icon-wrapper {
     border-radius: inherit !important;
     height: 108px !important;
     width: 192px !important;
+  }
+
+  .top-site-outer.add-button,
+  .top-site-outer.add-button .tile {
+    cursor: pointer !important;
   }
 
   .top-site-outer .tile .icon-wrapper.letter-fallback::before {

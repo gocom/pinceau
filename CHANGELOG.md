@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.7.0
+
+* Disable password saving, preferring external password managers.
+* Disable tab hover images.
+* Disable recent searches from URL bar suggestions.
+* Add support for custom user.js file. Custom user.js file can be placed inside custom directory, which
+  is then appended to the built user.js file.
+* Improve new tab page's "Add Shortcut" tile's styles.
+* Improve new tab page's shortcut grid styling on rows that do not have enough items to fill the whole row.
+
 ## 0.6.0
 
 * Remove weather widget from the new tab page.
