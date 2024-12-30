@@ -87,6 +87,7 @@ user_pref('extensions.pocket.enabled', false);
 user_pref('general.autoScroll', false);
 user_pref('general.smoothScroll', true);
 user_pref('full-screen-api.macos-native-full-screen', true);
+user_pref('media.videocontrols.picture-in-picture.video-toggle.enabled', false);
 user_pref('mousewheel.acceleration.factor', 3);
 user_pref('mousewheel.acceleration.start', 3);
 user_pref('mousewheel.default.action.override_x', 0);
