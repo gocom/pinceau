@@ -7,28 +7,29 @@
     padding-bottom: 0 !important;
   }
 
-  .thumbs-ui-compact .collapsible-section {
-    padding: 10px 25px !important;
+  .collapsible-section {
+    padding: 0 !important;
     margin-bottom: 0 !important;
   }
 
-  .thumbs-ui-compact .top-site-outer .layout-variant-a, .layout-variant-b .thumbs-ui-compact .top-site-outer {
+  .top-site-outer {
     margin-block-end: 0 !important;
   }
 
   .top-sites-list {
     display: flex !important;
     flex-wrap: wrap !important;
-    column-gap: 6px !important;
+    column-gap: 14px !important;
     row-gap: 24px !important;
-    max-width: 998px !important;
+    margin: 0 auto !important;
+    max-width: 968px !important;
+    padding: 14px !important;
   }
 
   .top-site-outer {
     display: flex !important;
     justify-content: center !important;
-    margin-left: 8px !important;
-    margin-right: 8px !important;
+    margin: 0 !important;
     width: calc(192px + 16px + 16px) !important;
   }
 
