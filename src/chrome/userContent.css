@@ -7,9 +7,21 @@
     padding-bottom: 0 !important;
   }
 
+  .thumbs-ui-compact .collapsible-section {
+    padding: 10px 25px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .thumbs-ui-compact .top-site-outer .layout-variant-a, .layout-variant-b .thumbs-ui-compact .top-site-outer {
+    margin-block-end: 0 !important;
+  }
+
   .top-sites-list {
     display: flex !important;
     flex-wrap: wrap !important;
+    column-gap: 6px !important;
+    row-gap: 24px !important;
+    max-width: 998px !important;
   }
 
   .top-site-outer {
@@ -44,6 +56,7 @@
     right: 0 !important;
   }
 
+  .logo-and-wordmark-wrapper,
   .top-site-outer .default-icon,
   .top-site-outer .search-topsite,
   .top-site-outer .title .icon,

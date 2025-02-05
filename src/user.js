@@ -72,6 +72,7 @@ user_pref('browser.urlbar.suggest.quicksuggest.nonsponsored', false);
 user_pref('browser.urlbar.suggest.quicksuggest.sponsored', false);
 user_pref('browser.urlbar.suggest.recentsearches', false);
 user_pref('browser.urlbar.suggest.searches', false);
+user_pref('browser.urlbar.showSearchTerms.enabled', false);
 user_pref('browser.urlbar.timesBeforeHidingSuggestionsHint', 0);
 user_pref('browser.urlbar.update2.engineAliasRefresh', true);
 user_pref('datareporting.healthreport.uploadEnabled', false);
