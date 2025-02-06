@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.0
+
+* Firefox 136 new tab page compatibility.
+* Enable "Add search engine" button in the search settings. Allows adding new search engines.
+* Enable adaptive history sorting for the URL bar history results.
+* Disable picture-in-picture due to memory usage issues.
+
 ## 0.7.0
 
 * Disable password saving, preferring external password managers.
