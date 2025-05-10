@@ -60,7 +60,7 @@
   .logo-and-wordmark-wrapper,
   .top-site-outer .default-icon,
   .top-site-outer .search-topsite,
-  .top-site-outer .title .icon,
+  .top-site-outer .tile .icon,
   .top-site-outer .top-site-icon:not(.rich-icon) {
     display: none !important;
   }
@@ -83,6 +83,7 @@
     background-image: none !important;
     background-position: 50% 50% !important;
     background-size: cover !important;
+    border-radius: 8px !important;
     height: 108px !important;
     width: 192px !important;
   }
@@ -99,6 +100,11 @@
   .top-site-outer .context-menu-button {
     background-color: transparent !important;
     inset-inline-end: 0 !important;
+    inset-block-start: 0 !important;
+  }
+
+  .top-site-outer .context-menu {
+    inset-block-start: 0 !important;
   }
 
   {{#thumbnails}}
