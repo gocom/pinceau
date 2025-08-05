@@ -152,9 +152,14 @@ module.exports = function (grunt) {
     install: {
       options: {
         profiles: [
-          '<%= prefix.home %>/Library/Application Support/Firefox/Profiles/*',
-          '<%= prefix.home %>/.mozilla/firefox/*',
-          '<%= prefix.home %>/Roaming/Mozilla/Firefox/Profiles/'
+          ...(process.env.FIREFOX_PROFILES
+            ? [`${process.env.FIREFOX_PROFILES}/*`]
+            : [
+              '<%= prefix.home %>/Library/Application Support/Firefox/Profiles/*',
+              '<%= prefix.home %>/.mozilla/firefox/*',
+              '<%= prefix.home %>/Roaming/Mozilla/Firefox/Profiles/'
+            ]
+          )
         ],
         backups: 'backup/<%= Date.now() %>/'
       },
@@ -355,6 +360,7 @@ module.exports = function (grunt) {
     });
 
     if (profiles.length === 0) {
+      grunt.fatal('No profile directories found.');
       return;
     }
 

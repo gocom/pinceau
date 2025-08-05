@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.0
+
+* Firefox 142 new tab page compatibility.
+
 ## 0.9.0
 
 * Firefox 139 new tab page compatibility.

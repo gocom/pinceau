@@ -1,4 +1,5 @@
 .PHONY: all rebuild clean help install lint package shell start test watch
+.ONESHELL:
 
 NODE = docker compose run --rm node
 
@@ -14,9 +15,9 @@ clean:
 	$(NODE) rm -rf build dist node_modules package-lock.json
 
 install:
-	@$(NODE) bash -c 'read -r -p "Are you sure you want to try to install pinceau to your Firefox profile? This requires that node and npm are installed on the host system, and will delete any current builds and installed packages, after which it will re-install them using the host system npm. This will overwrite files on your system and you may lose data. Proceed (Yes/no)? " answer && [[ "$answer" == [Yy]* ]]'
-	@$(MAKE) clean
-	npm install
+	@$(NODE) bash -c 'read -r -p "Are you sure you want to try to install pinceau to your Firefox profile? This requires that node and npm are installed on the host system. This will overwrite files on your system and you may lose data. Proceed (Yes/no)? " answer && [[ "$answer" == [Yy]* ]]'
+	@$(MAKE) node_modules
+	@$(MAKE) build
 	npm run project:install
 
 lint: node_modules
@@ -44,7 +45,9 @@ help:
 	@echo "Manage project"
 	@echo ""
 	@echo "Usage:"
-	@echo "  $$ make [command]"
+	@echo "  $$ make [command] ["
+	@echo "    [FIREFOX_PROFILES=<path>]"
+	@echo "  ]"
 	@echo ""
 	@echo "Commands:"
 	@echo ""
@@ -78,4 +81,9 @@ help:
 	@echo "  $$ make watch"
 	@echo "  Watch files for changes and trigger build automatically"
 	@echo "  and install new build to Firefox profiles"
+	@echo ""
+	@echo "Environment variables:"
+	@echo ""
+	@echo "  FIREFOX_PROFILES"
+	@echo "  Path to the parent directory containing Firefox profile directories."
 	@echo ""
