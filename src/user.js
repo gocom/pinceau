@@ -6,7 +6,6 @@
  * necessesary UI configuration when setting up a new profile.
  */
 
-
 user_pref('accessibility.browsewithcaret_shortcut.enabled', false);
 user_pref('app.normandy.first_run', false);
 user_pref('app.shield.optoutstudies.enabled', false);
