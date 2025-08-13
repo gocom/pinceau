@@ -6,6 +6,7 @@
  * necessesary UI configuration when setting up a new profile.
  */
 
+
 user_pref('accessibility.browsewithcaret_shortcut.enabled', false);
 user_pref('app.normandy.first_run', false);
 user_pref('app.shield.optoutstudies.enabled', false);
@@ -40,6 +41,7 @@ user_pref('browser.newtabpage.activity-stream.section.highlights.collapsed', tru
 user_pref('browser.newtabpage.activity-stream.section.topstories.showDisclaimer', false);
 user_pref('browser.newtabpage.activity-stream.showSearch', false);
 user_pref('browser.newtabpage.activity-stream.showSponsored', false);
+user_pref('browser.newtabpage.activity-stream.showSponsoredCheckboxes', false);
 user_pref('browser.newtabpage.activity-stream.showSponsoredTopSites', false);
 user_pref('browser.newtabpage.activity-stream.showWeather', false);
 user_pref('browser.newtabpage.activity-stream.telemetry', false);
