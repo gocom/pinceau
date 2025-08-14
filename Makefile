@@ -1,5 +1,6 @@
 .PHONY: all rebuild clean help install lint package shell start test watch
 .ONESHELL:
+.SHELLFLAGS = -ec
 
 NODE = docker compose run --rm node
 
