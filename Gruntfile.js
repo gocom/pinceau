@@ -157,7 +157,8 @@ module.exports = function (grunt) {
             : [
               '<%= prefix.home %>/Library/Application Support/Firefox/Profiles/*',
               '<%= prefix.home %>/.mozilla/firefox/*',
-              '<%= prefix.home %>/Roaming/Mozilla/Firefox/Profiles/'
+              '<%= prefix.home %>/Roaming/Mozilla/Firefox/Profiles/*',
+              '/mnt/c/Users/*/AppData/Roaming/Mozilla/Firefox/Profiles/*'
             ]
           )
         ],
@@ -354,13 +355,13 @@ module.exports = function (grunt) {
 
     grunt.file.expand(options.profiles).forEach(function (profile) {
       if (grunt.file.exists(profile) && grunt.file.isDir(profile)) {
-        grunt.verbose.ok(profile);
+        grunt.log.ok(`Found Firefox profile ${profile}`);
         profiles.push(profile);
       }
     });
 
     if (profiles.length === 0) {
-      grunt.fatal('No profile directories found.');
+      grunt.fatal('No Firefox profile directories found.');
       return;
     }
 

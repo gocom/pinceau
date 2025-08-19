@@ -57,6 +57,7 @@ user_pref('browser.shell.didSkipDefaultBrowserCheckOnFirstRun', true);
 user_pref('browser.startup.homepage', 'about:home');
 user_pref('browser.startup.homepage_override.mstone', 'ignore');
 user_pref('browser.tabs.groups.smart.enabled', false);
+user_pref('browser.tabs.groups.smart.userEnabled', false);
 user_pref('browser.tabs.hoverPreview.showThumbnails', false);
 user_pref('browser.tabs.warnOnClose', false);
 user_pref('browser.uitour.enabled', false);

@@ -16,10 +16,10 @@ clean:
 	$(NODE) rm -rf build dist node_modules package-lock.json
 
 install:
-	@$(NODE) bash -c 'read -r -p "Are you sure you want to try to install pinceau to your Firefox profile? This requires that node and npm are installed on the host system. This will overwrite files on your system and you may lose data. Proceed (Yes/no)? " answer && [[ "$answer" == [Yy]* ]]'
+	@$(NODE) bash -c 'read -r -p "Are you sure you want to try to install pinceau to your Firefox profile? This requires that node and npm are installed on the host system. This will overwrite files on your system and you may lose data. Proceed (Yes/no)? " answer && [[ "$$answer" == [Yy]* ]]'
 	@$(MAKE) node_modules
 	@$(MAKE) build
-	npm run project:install
+	@npm run project:install
 
 lint: node_modules
 	$(NODE) npm run lint

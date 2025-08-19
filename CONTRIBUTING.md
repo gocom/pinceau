@@ -15,14 +15,14 @@ Requirements
 -----
 
 * GNU make
-* [Docker](https://www.docker.com/) and docker-compose
+* [Docker](https://www.docker.com/) and Docker Compose
 
 Development
 -----
 
 For available commands, see:
 
-```
+```shell
 $ make help
 ```
 
@@ -31,19 +31,24 @@ Building
 
 To build distributable files, run:
 
-```
+```shell
 $ make build
 ```
 
 Builds are created to a `build` directory in the project directory,
-which can be installed to a Firefox profile.
+which can be installed to a Firefox profile. If the build directory
+exists already, you can force rebuilding with:
+
+```shell
+$ make rebuild
+```
 
 OpenSearch engines
 -----
 
 Open search engines can be installed through the included server and the web page:
 
-```
+```shell
 $ make start
 ```
 
@@ -58,7 +63,7 @@ Custom thumbnails can be added by creating a `custom/sites` directory
 and adding thumbnail images named after the
 site's hostname:
 
-```
+```shell
 $ mkdir -p custom/sites
 $ curl -s http://via.placeholder.com/320x180.jpg > custom/sites/google.com.jpg
 $ curl -s http://via.placeholder.com/320x180.jpg > custom/sites/mozilla.org.jpg
@@ -84,6 +89,6 @@ Coding style
 
 To verify that your additions follows coding style, run:
 
-```
+```shell
 $ make lint
 ```
