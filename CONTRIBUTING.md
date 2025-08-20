@@ -43,6 +43,17 @@ exists already, you can force rebuilding with:
 $ make rebuild
 ```
 
+The current build can be installed to a locally installed Firefox
+profile by running:
+
+```shell
+$ make install
+```
+
+The above install command requires that Node.js is installed locally
+on the system, rather than only depending on Docker containers, due to the
+installation process requiring access to query the host OS' file system.
+
 OpenSearch engines
 -----
 
