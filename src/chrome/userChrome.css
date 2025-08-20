@@ -18,6 +18,16 @@
 }
 
 /**
+ * Hide drag-to-pin tab drop area.
+ *
+ * The drop are causes eased content shift, which is not ideal for usability.
+ */
+
+#pinned-drop-indicator {
+  display: none !important;
+}
+
+/**
  * Hide default favicon.
  */
 
