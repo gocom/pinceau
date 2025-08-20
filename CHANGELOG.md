@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.0
+
+* Disable drag-to-pin tab feature. The drop zone that appears at the start of horizontal tab bar when dragging a
+  tab, causes content shifting and makes it harder to drag a tab at the beginning of the tab bar. Tabs can be pinned
+  from the tab's context menu.
+
 ## 0.11.0
 
 * Disable AI tab grouping. Disabling  AI and machine learning features, running on the background, improves performance,
