@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.11.0
+
+* Disable AI tab grouping. Disabling  AI and machine learning features, running on the background, improves performance,
+  as the models are ran locally on the user's system, causing high resource usage, degrading user experience.
+* Disable AI link hover preview.
+* Disable AI chat panel. AI chat's can be used through their own website's and services and do not need to be integrated
+  in the browser UI.
+* Disable URL bar's picture-in-picture button.
+
 ## 0.10.0
 
 * Firefox 142 new tab page compatibility.
