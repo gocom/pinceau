@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.13.0
+
+* Remove "Play tab" button from tabs.
+
 ## 0.12.0
 
 * Disable drag-to-pin tab feature. The drop zone that appears at the start of horizontal tab bar when dragging a

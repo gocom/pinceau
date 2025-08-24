@@ -18,6 +18,14 @@
 }
 
 /**
+ * Hide "Play tab" button from tabs.
+ */
+
+.tab-audio-button:not([soundplaying], [muted]) {
+  display: none !important;
+}
+
+/**
  * Hide drag-to-pin tab drop area.
  *
  * The drop are causes eased content shift, which is not ideal for usability.
