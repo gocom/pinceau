@@ -11,14 +11,18 @@ Versioning
 
 [Semantic Versioning](https://semver.org/).
 
-Requirements
+Development environment
 -----
+
+The local development environment uses nvm through Makefile wrapper to manage Node and npm version.
+
+### Requirements
 
 * GNU make
-* [Docker](https://www.docker.com/) and Docker Compose
+* GNU Coreutils
+* [nvm](https://github.com/nvm-sh/nvm)
 
-Development
------
+### Available commands
 
 For available commands, see:
 
@@ -26,8 +30,7 @@ For available commands, see:
 $ make help
 ```
 
-Building
------
+### Building
 
 To build distributable files, run:
 
@@ -36,23 +39,23 @@ $ make build
 ```
 
 Builds are created to a `build` directory in the project directory,
-which can be installed to a Firefox profile. If the build directory
-exists already, you can force rebuilding with:
-
-```shell
-$ make rebuild
-```
+which can be installed to a Firefox profile.
 
 The current build can be installed to a locally installed Firefox
-profile by running:
+profiles by running:
 
 ```shell
 $ make install
 ```
 
-The above install command requires that Node.js is installed locally
-on the system, rather than only depending on Docker containers, due to the
-installation process requiring access to query the host OS' file system.
+### Working on code
+
+When making changes to code please make sure that linter and tests pass before opening a pull request. Linter
+can be run with:
+
+```shell
+$ make lint
+```
 
 OpenSearch engines
 -----
@@ -67,6 +70,8 @@ You can find the web server from the address printed after running the above com
 
 Customization
 -----
+
+Builds can be customized following these instructions.
 
 ### New tab page top site thumbnails
 
@@ -94,12 +99,3 @@ appended to the generated user.js.
 ### Custom search engines
 
 Custom OpenSearch engines can be created to `custom/opensearch/engines`.
-
-Coding style
------
-
-To verify that your additions follows coding style, run:
-
-```shell
-$ make lint
-```

@@ -5,6 +5,7 @@
 !.eslintrc
 !.jscsrc
 !.jshintrc
+!.nvmrc
 /backup/
 /build/
 /custom/
