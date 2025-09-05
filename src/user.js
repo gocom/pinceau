@@ -1,15 +1,16 @@
 /**
  * Firefox user settings.
  *
- * Disables various non-standard features, disables form auto-fill,
- * tweaks scrolling to match better native Mac OS behavior and minimises
- * necessesary UI configuration when setting up a new profile.
+ * Disables various non-standard features, disables form autofill,
+ * tweaks scrolling to match better native macOS behavior and minimises
+ * necessary UI configuration when setting up a new profile.
  */
 
 user_pref('accessibility.browsewithcaret_shortcut.enabled', false);
 user_pref('app.normandy.first_run', false);
 user_pref('app.shield.optoutstudies.enabled', false);
 user_pref('browser.aboutConfig.showWarning', false);
+user_pref('browser.aboutwelcome.enabled', false);
 user_pref('browser.backspace_action', 2);
 user_pref('browser.download.panel.shown', true);
 user_pref('browser.download.useDownloadDir', false);
@@ -56,6 +57,7 @@ user_pref('browser.shell.checkDefaultBrowser', false);
 user_pref('browser.shell.didSkipDefaultBrowserCheckOnFirstRun', true);
 user_pref('browser.startup.homepage', 'about:home');
 user_pref('browser.startup.homepage_override.mstone', 'ignore');
+user_pref('browser.startup.upgradeDialog.enabled', false);
 user_pref('browser.tabs.groups.smart.enabled', false);
 user_pref('browser.tabs.groups.smart.userEnabled', false);
 user_pref('browser.tabs.hoverPreview.showThumbnails', false);
@@ -83,6 +85,7 @@ user_pref('browser.urlbar.timesBeforeHidingSuggestionsHint', 0);
 user_pref('browser.urlbar.update2.engineAliasRefresh', true);
 user_pref('datareporting.healthreport.uploadEnabled', false);
 user_pref('datareporting.policy.dataSubmissionEnabled', false);
+user_pref('datareporting.policy.dataSubmissionPolicyBypassNotification', true);
 user_pref('devtools.inspector.show-three-pane-tooltip', false);
 user_pref('devtools.inspector.three-pane-first-run', false);
 user_pref('devtools.onboarding.telemetry.logged', true);

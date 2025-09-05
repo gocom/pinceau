@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.14.0
+
+* Disable the **Welcome to Firefox** onboarding modal that appears on the first launch.
+
 ## 0.13.0
 
 * Remove "Play tab" button from tabs.
