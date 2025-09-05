@@ -8,7 +8,7 @@ all: build
 
 build:
 	@. ./dev/hook/nvm.sh
-	$(MAKE) node_modules
+	@$(MAKE) -s node_modules
 	$(NPM) run project:build
 
 build-once:
@@ -28,8 +28,8 @@ install:
 		*) exit 1 ;;
 	esac
 
-	$(MAKE) node_modules
-	$(MAKE) build-once
+	@$(MAKE) -s node_modules
+	@$(MAKE) -s build-once
 	$(NPM) run project:install
 
 lint:
@@ -44,22 +44,22 @@ endif
 
 package:
 	@. ./dev/hook/nvm.sh
-	$(MAKE) build-once
+	@$(MAKE) -s build-once
 	$(NPM) run project:pack
 
 start:
 	@. ./dev/hook/nvm.sh
-	$(MAKE) node_modules
+	@$(MAKE) -s node_modules
 	$(NPM) run start
 
 test:
 	@. ./dev/hook/nvm.sh
-	$(MAKE) node_modules
+	@$(MAKE) -s node_modules
 	$(NPM) run test
 
 watch:
 	@. ./dev/hook/nvm.sh
-	$(MAKE) node_modules
+	@$(MAKE) -s node_modules
 	$(NPM) run watch
 
 help:
