@@ -53,6 +53,8 @@ user_pref('browser.pagethumbnails.capturing_disabled', false);
 user_pref('browser.search.countryCode', 'US');
 user_pref('browser.search.region', 'US');
 user_pref('browser.search.suggest.enabled', false);
+user_pref('browser.sessionstore.interval', 1800000);
+user_pref('browser.sessionstore.interval.idle', 3600000);
 user_pref('browser.shell.checkDefaultBrowser', false);
 user_pref('browser.shell.didSkipDefaultBrowserCheckOnFirstRun', true);
 user_pref('browser.startup.homepage', 'about:home');
