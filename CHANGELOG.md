@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.15.0
+
+* Disable address bar's important dates and events feature introduced in Firefox 143.
+* Reduce session backup interval to reduce the amount of disk writes Firefox performs.
+
 ## 0.14.0
 
 * Disable the **Welcome to Firefox** onboarding modal that appears on the first launch.
