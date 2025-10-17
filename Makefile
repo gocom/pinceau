@@ -21,7 +21,7 @@ clean:
 
 install:
 	@. ./dev/hook/nvm.sh
-	read -r -p "Are you sure you want to try to install pinceau to your Firefox profile? This requires that node and npm are installed on the host system. This will overwrite files on your system and you may lose data. Proceed (Yes/no)? " answer
+	read -r -p "Are you sure you want to try to install pinceau to your Firefox profile? This will overwrite files on your system and you may lose data. Proceed (Yes/no)? " answer
 
 	case "$$answer" in
 		y*|Y*) ;;

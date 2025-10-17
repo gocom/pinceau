@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.16.0
+
+* Disable the new **Profiles Refresh**. The original profile manager supports shortcuts and command line flags, reducing
+  the amount of clicks required for launching multiple Firefox instances with different profiles. If Firefox has already
+  been started with the new profile manager enabled, creating a fresh profile is needed to get rid of
+  the user interface elements, which do not follow the preference, but the internal profile data-state.
+* Disable machine learning based translation feature. The translation models are ran locally on the user's system,
+  which, while good for privacy, causes high resource usage.
+* Disable **Cookie Banner**, **VPN**, **Focus** and **Pin** features' promotional messages.
+
 ## 0.15.0
 
 * Disable address bar's important dates and events feature introduced in Firefox 143.
@@ -21,8 +31,8 @@
 
 ## 0.11.0
 
-* Disable AI tab grouping. Disabling  AI and machine learning features, running on the background, improves performance,
-  as the models are ran locally on the user's system, causing high resource usage, degrading user experience.
+* Disable AI tab grouping. Disabling AI and machine learning features improves performance, as the models are ran
+  locally on the user's system, causing high resource usage, degrading user experience.
 * Disable AI link hover preview.
 * Disable AI chat panel. AI chat's can be used through their own website's and services and do not need to be integrated
   in the browser UI.
