@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.17.0
+
+* Disable **Page Assist** and **Smart Assist** AI features.
+* Disable additional machine learning feature flags `browser.ml.chat.sidebar`, `browser.ml.chat.page`,
+  `browser.ml.chat.shortcuts` and `browser.ml.chat.shortcuts.custom` which appear to be evaluated regardless of the
+  other flags, and the badges `browser.ml.chat.page.footerBadge` and `browser.ml.chat.page.menuBadge`.
+
 ## 0.16.0
 
 * Disable the new **Profiles Refresh**. The original profile manager supports shortcuts and command line flags, reducing
