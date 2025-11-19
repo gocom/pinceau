@@ -45,6 +45,7 @@ user_pref('browser.newtabpage.activity-stream.feeds.snippets', false);
 user_pref('browser.newtabpage.activity-stream.feeds.telemetry', false);
 user_pref('browser.newtabpage.activity-stream.feeds.topsites', true);
 user_pref('browser.newtabpage.activity-stream.migrationExpired', true);
+user_pref('browser.newtabpage.activity-stream.mobileDownloadModal.enabled', false);
 user_pref('browser.newtabpage.activity-stream.prerender', false);
 user_pref('browser.newtabpage.activity-stream.section.highlights.collapsed', true);
 user_pref('browser.newtabpage.activity-stream.section.topstories.showDisclaimer', false);
