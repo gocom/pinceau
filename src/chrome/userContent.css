@@ -24,6 +24,7 @@
     display: flex !important;
     flex-wrap: wrap !important;
     column-gap: 14px !important;
+    justify-content: start !important;
     row-gap: 24px !important;
     margin: 0 auto !important;
     max-width: 968px !important;
@@ -50,6 +51,11 @@
   .top-site-outer.add-button,
   .top-site-outer.add-button .tile {
     cursor: pointer !important;
+  }
+
+  .top-site-outer .top-site-button {
+    display: flex !important;
+    padding: var(--space-large) var(--space-large) var(--space-xsmall) !important;
   }
 
   .top-site-outer .tile .icon-wrapper.letter-fallback::before {
@@ -96,9 +102,14 @@
   .top-site-outer .tile {
     background-image: none !important;
     background-position: 50% 50% !important;
+    background-repeat: no-repeat !important;
     background-size: cover !important;
     border-radius: 8px !important;
+    border: 0 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
     height: 108px !important;
+    margin-block-start: 0 !important;
+    transition: none !important;
     width: 192px !important;
   }
 

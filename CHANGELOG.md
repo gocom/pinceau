@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.18.0
+
+* Firefox 150 new tab page compatibility. Supports the opt-in Nova new tab page redesign that ships with Firefox 150.
+
 ## 0.17.0
 
 * Disable **Page Assist** and **Smart Assist** AI features.
