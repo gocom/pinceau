@@ -3,6 +3,31 @@
  */
 
 @-moz-document url(about:newtab), url(about:home) {
+  .nova-outer-wrapper {
+    display: flex !important;
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 16px !important;
+  }
+
+  .nova-enabled.container {
+    width: 100% !important;
+    height: 100% !important;
+    grid-auto-rows: auto !important;
+    padding: 0 !important;
+  }
+
+  .nova-enabled .weather-widget {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .nova-enabled .weather-widget .widget-title-bar {
+    margin: 0 !important;
+  }
+
   .ds-outer-wrapper-breakpoint-override main {
     padding-bottom: 0 !important;
   }

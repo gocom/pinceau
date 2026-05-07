@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.19.0
+
+* Support Firefox 151.0b7 Nova new tab page redesign.
+
 ## 0.18.0
 
 * Firefox 150 new tab page compatibility. Supports the opt-in Nova new tab page redesign that ships with Firefox 150.
