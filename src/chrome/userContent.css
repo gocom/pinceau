@@ -19,15 +19,6 @@
     padding: 0 !important;
   }
 
-  .nova-enabled .weather-widget {
-    background: transparent !important;
-    box-shadow: none !important;
-  }
-
-  .nova-enabled .weather-widget .widget-title-bar {
-    margin: 0 !important;
-  }
-
   .ds-outer-wrapper-breakpoint-override main {
     padding-bottom: 0 !important;
   }
